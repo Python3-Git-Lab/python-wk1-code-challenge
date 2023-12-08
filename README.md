@@ -24,18 +24,19 @@ def convert_to_24_hour_time(hour, minute, period):
 
 This function takes three integers a, b, and c as arguments and returns True if exactly two of them are positive, and False otherwise.
 
-```python
-def exactly_two_positive(a, b, c):
-    positive_count = 0
-    
-    if a > 0:
-        positive_count += 1
-    if b > 0:
-        positive_count += 1
-    if c > 0:
-        positive_count += 1
-    
-    return positive_count == 2
+```
+Examples:
+(2, 4, -3) == True
+
+(-4, 6, 8) == True
+
+(4, -6, 9) == True
+
+(-4, 6, 0) == False
+
+(4, 6, 10) == False
+
+(-14, -3, -4) == False
 ```
 ## Challenge 3: Challenge 3: Consonant value
 

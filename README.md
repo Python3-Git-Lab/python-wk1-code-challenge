@@ -44,22 +44,20 @@ Examples:
 
 This function takes a lowercase string with alphabetic characters only and no spaces. It returns the highest value of consonant substrings based on the given rules.
 
-```python
-def highest_consonant_value(word):
-    vowels = "aeiou"
-    consonant_values = {letter: index + 1 for index, letter in enumerate("abcdefghijklmnopqrstuvwxyz")}
-    
-    # Extract consonant substrings
-    consonant_substrings = ["".join(char for char in substring if char not in vowels) for substring in word.split(vowels)]
-    
-    # Calculate the value for each consonant substring
-    values = [sum(consonant_values[char] for char in substring) for substring in consonant_substrings]
-    
-    # Return the highest value
-    return max(values)
+```
+Examples;
+For the word "zodiacs", solve("zodiacs") = 26
+
+For example, for the word "zodiacs", let's cross out the vowels. We get: "z d cs"
+
+-- The consonant substrings are: "z", "d" and "cs" and the values are z = 26, d = 4 and cs = 3 + 19 = 22. The highest is 26.
+
+For the word "strength", solve("strength") = 57.
+
+The consonant substrings are: "str" and "ngth" with values "str" = 19 + 20 + 18 = 57 and "ngth" = 14 + 7 + 20 + 8 = 49. The highest is 57.
 ```
 
-## Licence
+## License
 
 This project is licensed under MIT license standard
 

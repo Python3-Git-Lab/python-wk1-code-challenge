@@ -6,5 +6,5 @@ def convert(hour , minute , period):
     elif period == "am" and hour == 12:
         hour = 0
     return f"{hour:02d}{minute:02d}"
-converted= convert(12 , 10 , "am")
+converted= convert(12 , 10 , "pm")
 print (converted)
